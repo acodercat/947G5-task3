@@ -11,6 +11,7 @@ import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
 export default {
+  base: './',
 //   plugins: [vue()],
   test: {
     globals: true,
@@ -22,17 +23,17 @@ export default {
 //     },
 //   },
   plugins: [
-    [vue()],
+    vue(),
     // vue({
     //   template: { transformAssetUrls }
     // }),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
-    vuetify({
-      autoImport: true,
+    // vuetify({
+      // autoImport: true,
     //   styles: {
     //     configFile: 'src/styles/settings.scss',
     //   },
-    }),
+    // }),
     // ViteFonts({
     //   google: {
     //     families: [{
