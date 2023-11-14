@@ -86,6 +86,9 @@ export default {
     };
   },
   methods: {
+    showMessage(message) {
+      alert(message);
+    },
     cloneDeep(obj) {
       var newObj = Array.isArray(obj) ? [] : {};
       for (let key in obj) {
@@ -147,7 +150,7 @@ export default {
       this.boards = [];
       this.fitShapes({ "Width": 11, "Height": 5, Layout: this.board }, 0, 0, this.indexOfAvailableShapes);
       if (!this.isSolutionFound) {
-        alert('No solution found.');
+        this.showMessage('No solution found.');
       }},
     fitShapes(board, boardX, boardY, shapeList) {
       var boardLayout = board.Layout;
@@ -201,7 +204,7 @@ export default {
               if (newShapeList.length === 0) {
                 this.boards.push(newBoard);
                 this.isSolutionFound = true; // Set the flag to true when a solution is found
-                alert('Good Job! Solution Found!');
+                this.showMessage('Good Job! Solution Found!');
                 return true;
               } else {
                 let result = this.fitShapes(newBoard, boardX, boardY, newShapeList);
@@ -247,16 +250,16 @@ export default {
                 this.board[position[1]][position[0]] = this.allShapes.indexOf(shape.Name);
                 this.gridState[position[1]][position[0]] = this.colors[this.allShapes.indexOf(shape.Name)];
               }
-              alert('Shape added.');
+              this.Message('Shape added.');
               this.currentLayout = [];
             } else {
-              alert('Shape already used.');
+              this.showMessage('Shape already used.');
             }
             return;
           }
         }
       }
-      alert('No matching shape found.');
+      this.showMessage('No matching shape found.');
     },
 
     normalizeLayout(layout) {
