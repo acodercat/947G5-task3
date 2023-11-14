@@ -6,8 +6,6 @@ import PuzzleComponent from '@/components/PuzzleComponent.vue';
 
 describe('PuzzleComponent', () => {
 
-    // beforeEach(() => []);
-
     global.alert = function (message) {};
 
 

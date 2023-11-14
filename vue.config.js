@@ -1,4 +1,5 @@
 const { defineConfig } = require('@vue/cli-service')
+// import { defineConfig } from require('vite')
 module.exports = defineConfig({
   transpileDependencies: true,
 
