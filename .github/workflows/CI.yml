@@ -23,15 +23,15 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '14'  # 或者您项目所需的 Node.js 版本
+          node-version: '16'
       - name: Install Dependencies
         run: npm install
       - name: Build
-        run: npm run build  # Vue CLI 的构建命令
+        run: npm run build
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: dist  # Vue 构建输出的目录
+          path: dist
 
   deploy:
     environment:
