@@ -11,7 +11,7 @@ import { defineConfig } from 'vite'
 import { fileURLToPath, URL } from 'node:url'
 
 export default {
-  base: '/947G5-task3',
+  base: './',
 //   plugins: [vue()],
   test: {
     globals: true,
