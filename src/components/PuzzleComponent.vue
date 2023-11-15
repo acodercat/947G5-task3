@@ -250,7 +250,7 @@ export default {
                 this.board[position[1]][position[0]] = this.allShapes.indexOf(shape.Name);
                 this.gridState[position[1]][position[0]] = this.colors[this.allShapes.indexOf(shape.Name)];
               }
-              this.Message('Shape added.');
+              this.showMessage('Shape added.');
               this.currentLayout = [];
             } else {
               this.showMessage('Shape already used.');
